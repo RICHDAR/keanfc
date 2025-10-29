@@ -1,0 +1,269 @@
+/* ======== RESET ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======== BASE ======== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ======== HEADER ======== */
+header {
+  background: linear-gradient(90deg, #1b001b 0%, #4a007a 100%);
+  padding: 25px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 3px solid #a94eff;
+  box-shadow: 0 0 15px #4a007a;
+}
+
+header h1 {
+  font-size: 3em;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #bbb;
+  text-decoration: none;
+  margin: 0 20px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.2s, border-bottom 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #a94eff;
+  border-bottom: 2px solid #a94eff;
+}
+
+/* ======== HOME ======== */
+.home-hero {
+  background: url('vittoria_titolo.jpg') center/cover no-repeat;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 0, 20, 0.7);
+}
+
+.home-hero h2 {
+  position: relative;
+  color: #fff;
+  font-size: 3em;
+  text-shadow: 0 0 20px #a94eff;
+  z-index: 1;
+}
+
+section {
+  padding: 60px 10%;
+}
+
+section h2 {
+  color: #a94eff;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* ======== SQUADRA ======== */
+.squadra-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.giocatore {
+  background: #1a001a;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 15px #4a007a;
+  transition: transform 0.2s;
+}
+
+.giocatore:hover {
+  transform: scale(1.05);
+}
+
+.giocatore img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #a94eff;
+  margin-bottom: 10px;
+}
+
+.giocatore h3 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.giocatore p {
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+/* ======== TITOLI ======== */
+.titoli-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.trofeo-card {
+  background: #1a001a;
+  border-radius: 15px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 15px #4a007a;
+  gap: 20px;
+}
+
+.trofeo-card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #a94eff;
+}
+
+.trofeo-info h3 {
+  font-size: 1.8em;
+  color: #a94eff;
+  margin-bottom: 10px;
+}
+
+.trofeo-info p {
+  color: #ccc;
+  max-width: 600px;
+}
+
+/* ======== NEWS ======== */
+.news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.news-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #1a001a;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 85%;
+  box-shadow: 0 0 20px #4a007a;
+}
+
+.news-card img {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.news-info {
+  padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-info h3 {
+  color: #a94eff;
+  margin-bottom: 10px;
+}
+
+.news-info p {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.news-info .data {
+  text-align: right;
+  color: #888;
+  font-size: 0.9em;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: #1b001b;
+  padding: 20px;
+  text-align: center;
+  color: #bbb;
+  border-top: 3px solid #6a0dad;
+}
+
+footer p {
+  font-size: 0.95em;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 900px) {
+  .trofeo-card, .news-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trofeo-card img,
+  .news-card img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  nav a {
+    margin: 8px;
+    font-size: 1em;
+  }
+}
+
